@@ -18,9 +18,12 @@ export default function LoginPage({ onLoginSuccess }: LoginPageProps) {
   // Listen for Google Sign-In success messages from the popup window
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // Allow messages from standard origins of dev preview or localhost
+      // Allow messages from standard origins of dev preview, localhost, or the current origin
       const origin = event.origin;
-      if (!origin.endsWith('.run.app') && !origin.includes('localhost') && !origin.includes('127.0.0.1')) {
+      if (!origin.endsWith('.run.app') && 
+          !origin.includes('localhost') && 
+          !origin.includes('127.0.0.1') && 
+          origin !== window.location.origin) {
         return;
       }
       
