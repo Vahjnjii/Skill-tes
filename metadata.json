@@ -1,0 +1,6 @@
+{
+  "name": "Skill test",
+  "description": "An automated AI video generation assessment platform featuring dual dashboard roles, rules evaluation, persistent timers across refreshes, and video prompt upload folders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
